@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		32113E382D85DBFF0064115E /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 32113E372D85DBFF0064115E /* CodeScanner */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		3217B4202D822D8400688C9E /* IcecreamUscream.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IcecreamUscream.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -23,6 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32113E382D85DBFF0064115E /* CodeScanner in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +70,7 @@
 			);
 			name = IcecreamUscream;
 			packageProductDependencies = (
+				32113E372D85DBFF0064115E /* CodeScanner */,
 			);
 			productName = IcecreamUscream;
 			productReference = 3217B4202D822D8400688C9E /* IcecreamUscream.app */;
@@ -94,6 +100,9 @@
 			);
 			mainGroup = 3217B4172D822D8400688C9E;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				32113E362D85DBFF0064115E /* XCRemoteSwiftPackageReference "CodeScanner" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 3217B4212D822D8400688C9E /* Products */;
 			projectDirPath = "";
@@ -324,6 +333,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		32113E362D85DBFF0064115E /* XCRemoteSwiftPackageReference "CodeScanner" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "http://github.com/twostraws/CodeScanner";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.5.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		32113E372D85DBFF0064115E /* CodeScanner */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 32113E362D85DBFF0064115E /* XCRemoteSwiftPackageReference "CodeScanner" */;
+			productName = CodeScanner;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3217B4182D822D8400688C9E /* Project object */;
 }
