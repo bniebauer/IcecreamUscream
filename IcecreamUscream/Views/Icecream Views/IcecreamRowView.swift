@@ -12,6 +12,9 @@ struct IcecreamRowView: View {
     
     var body: some View {
         HStack {
+            Image(icecream.imageString)
+                .resizable()
+                .frame(width: 75, height: 75)
             Text(icecream.flavor)
             Spacer()
             Text("\(icecream.basePrice, format: .currency(code: "USD"))")

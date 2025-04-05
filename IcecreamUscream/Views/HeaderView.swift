@@ -10,6 +10,7 @@ struct HeaderView: View {
     
     var body: some View {
         HStack {
+            AccountButton()
             Spacer()
             Image(systemName: "menucard")
             Text("Menu")
@@ -17,11 +18,7 @@ struct HeaderView: View {
             Button {
                 
             } label: {
-                NavigationLink(destination: CartView()) {
-                    Image(systemName: "cart")
-                        .bold()
-                        .foregroundStyle(.green)
-                }
+                CartButton()
             }
         }
         .font(.title)

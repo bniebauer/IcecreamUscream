@@ -8,20 +8,25 @@
 import SwiftUI
 
 struct CartView: View {
-    @State private var selection: [CartItem] = []
-    
+    @Environment(Cart.self) private var cartManager
     
     var body: some View {
         VStack {
             Section {
-                ForEach(selection, id: \.icecream.flavor) { item in
-                    Text(item.icecream.flavor)
+                List {
+                    ForEach(cartManager.selection) { item in
+                        CartItemRowView(cartItem: item)
+                    }
+                    .onDelete(perform: cartManager.remove)
                 }
             }
             Section {
                 HStack {
-                    Text("Total")
+                    Spacer()
+                    Text("Total \(cartManager.cartTotal, format: .currency(code: "USD"))")
+                    Spacer()
                 }
+                .padding()
             }
             .padding()
             .background(.blue.opacity(0.2))
@@ -53,4 +58,5 @@ struct CartView: View {
 
 #Preview {
     CartView()
+        .environment(Cart())
 }

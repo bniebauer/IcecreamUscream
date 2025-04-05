@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct IcecreamUscreamApp: App {
+    @State private var cartManager = Cart()
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environment(cartManager)
         }
     }
 }

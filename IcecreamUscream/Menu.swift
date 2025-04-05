@@ -1,44 +1,22 @@
 //
-//  ContentView.swift
+//  MenuManager.swift
 //  IcecreamUscream
 //
-//  Created by Brenton Niebauer on 3/12/25.
+//  Created by Brenton Niebauer on 4/5/25.
 //
 
-import SwiftUI
+import Foundation
 
-struct ContentView: View {
+@Observable
+class Menu {
     private let hostURLString = "https://niebauerwebapp.azurewebsites.net/icecream"
     private let debugURLString = "http://localhost:5000/api/List/icecream"
     
-    @State private var options = [
+    var menuItems = [
         Icecream(id: UUID().uuidString, flavor: "Vanilla", basePrice: 2.0),
+        Icecream(id: UUID().uuidString, flavor: "Chocolate", basePrice: 2.0),
     ]
     
-    var body: some View {
-        NavigationStack {
-            VStack {
-                HeaderView()
-                
-                List {
-                    ForEach(options) { icecream in
-                        NavigationLink(destination: IcecreamDetailView(icecream: icecream)) {
-                            IcecreamRowView(icecream: icecream)
-                        }
-                    }
-                }
-                .clipShape(RoundedRectangle(cornerRadius: 8))
-                
-            }
-            .padding()
-            .toolbar {
-                
-            }
-            .task {
-                await loadData()
-            }
-        }
-    }
     
     func loadData() async {
         guard let url = URL(string: debugURLString) else {
@@ -53,7 +31,7 @@ struct ContentView: View {
             print(stringData)
 #endif
             if let decodedData = try? JSONDecoder().decode([Icecream].self, from: data) {
-                options = decodedData
+                menuItems = decodedData
             } else {
                 print("Could not decode data.")
             }
@@ -61,8 +39,4 @@ struct ContentView: View {
             print("Invalid data")
         }
     }
-}
-
-#Preview {
-    ContentView()
 }
