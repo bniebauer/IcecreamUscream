@@ -10,14 +10,30 @@
 		32113E382D85DBFF0064115E /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 32113E372D85DBFF0064115E /* CodeScanner */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		32E5D3982DA1C9F000CCDCE3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3217B4182D822D8400688C9E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3217B41F2D822D8400688C9E;
+			remoteInfo = IcecreamUscream;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		3217B4202D822D8400688C9E /* IcecreamUscream.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IcecreamUscream.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		32E5D3942DA1C9F000CCDCE3 /* IcecreamUscreamTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IcecreamUscreamTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		3217B4222D822D8400688C9E /* IcecreamUscream */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = IcecreamUscream;
+			sourceTree = "<group>";
+		};
+		32E5D3952DA1C9F000CCDCE3 /* IcecreamUscreamTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = IcecreamUscreamTests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -31,6 +47,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		32E5D3912DA1C9F000CCDCE3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -38,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				3217B4222D822D8400688C9E /* IcecreamUscream */,
+				32E5D3952DA1C9F000CCDCE3 /* IcecreamUscreamTests */,
 				3217B4212D822D8400688C9E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -46,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				3217B4202D822D8400688C9E /* IcecreamUscream.app */,
+				32E5D3942DA1C9F000CCDCE3 /* IcecreamUscreamTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -76,6 +101,29 @@
 			productReference = 3217B4202D822D8400688C9E /* IcecreamUscream.app */;
 			productType = "com.apple.product-type.application";
 		};
+		32E5D3932DA1C9F000CCDCE3 /* IcecreamUscreamTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 32E5D39A2DA1C9F000CCDCE3 /* Build configuration list for PBXNativeTarget "IcecreamUscreamTests" */;
+			buildPhases = (
+				32E5D3902DA1C9F000CCDCE3 /* Sources */,
+				32E5D3912DA1C9F000CCDCE3 /* Frameworks */,
+				32E5D3922DA1C9F000CCDCE3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				32E5D3992DA1C9F000CCDCE3 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				32E5D3952DA1C9F000CCDCE3 /* IcecreamUscreamTests */,
+			);
+			name = IcecreamUscreamTests;
+			packageProductDependencies = (
+			);
+			productName = IcecreamUscreamTests;
+			productReference = 32E5D3942DA1C9F000CCDCE3 /* IcecreamUscreamTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -83,11 +131,15 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1620;
+				LastSwiftUpdateCheck = 1630;
 				LastUpgradeCheck = 1620;
 				TargetAttributes = {
 					3217B41F2D822D8400688C9E = {
 						CreatedOnToolsVersion = 16.2;
+					};
+					32E5D3932DA1C9F000CCDCE3 = {
+						CreatedOnToolsVersion = 16.3;
+						TestTargetID = 3217B41F2D822D8400688C9E;
 					};
 				};
 			};
@@ -109,12 +161,20 @@
 			projectRoot = "";
 			targets = (
 				3217B41F2D822D8400688C9E /* IcecreamUscream */,
+				32E5D3932DA1C9F000CCDCE3 /* IcecreamUscreamTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		3217B41E2D822D8400688C9E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		32E5D3922DA1C9F000CCDCE3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -131,7 +191,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		32E5D3902DA1C9F000CCDCE3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		32E5D3992DA1C9F000CCDCE3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3217B41F2D822D8400688C9E /* IcecreamUscream */;
+			targetProxy = 32E5D3982DA1C9F000CCDCE3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		3217B42C2D822D8600688C9E /* Debug */ = {
@@ -313,6 +388,44 @@
 			};
 			name = Release;
 		};
+		32E5D39B2DA1C9F000CCDCE3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 87W34RA6G8;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.niebauer.IcecreamUscreamTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IcecreamUscream.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/IcecreamUscream";
+			};
+			name = Debug;
+		};
+		32E5D39C2DA1C9F000CCDCE3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 87W34RA6G8;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.niebauer.IcecreamUscreamTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IcecreamUscream.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/IcecreamUscream";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -330,6 +443,15 @@
 			buildConfigurations = (
 				3217B42F2D822D8600688C9E /* Debug */,
 				3217B4302D822D8600688C9E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		32E5D39A2DA1C9F000CCDCE3 /* Build configuration list for PBXNativeTarget "IcecreamUscreamTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				32E5D39B2DA1C9F000CCDCE3 /* Debug */,
+				32E5D39C2DA1C9F000CCDCE3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
